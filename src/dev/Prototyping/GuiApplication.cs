@@ -14,7 +14,6 @@ public class GuiApplication : Application
     {
         var view = (ViewController = viewController).View;
         WindowController = new WindowController(view.Name, view.Title, view.ClientSize.X, view.ClientSize.Y, view.State);
-        WindowController.Load += OnControllerLoaded;
     }
 
     protected override void OnStartUp()
@@ -24,10 +23,5 @@ public class GuiApplication : Application
         ViewController.Initialize(WindowController);
         //  now the window controller can run
         WindowController.Run();
-    }
-
-    private IClient OnControllerLoaded()
-    {
-        return ViewController.View;
     }
 }

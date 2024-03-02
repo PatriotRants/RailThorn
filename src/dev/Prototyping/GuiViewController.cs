@@ -24,21 +24,23 @@ public class GuiViewController : ViewController
 
     protected override void OnInitializing(IWindowController controller)
     {
-        WindowController = controller;
+        (WindowController = controller).Load += OnControllerLoaded;
     }
 
     private void OnLoad()
     {
 
     }
-
     private void OnUnload()
     {
 
     }
-
     private void OnClosing(CancelEventArgs args)
     {
 
+    }
+    private IClient OnControllerLoaded()
+    {
+        return View;
     }
 }
