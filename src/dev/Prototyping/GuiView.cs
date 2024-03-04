@@ -13,7 +13,7 @@ public class GuiView : View
     {
         Title = title;
         ClientSize = size;
-        State = windowState;
+        WindowState = windowState;
     }
 
     public override void OnClosingWindow(CancelEventArgs args)

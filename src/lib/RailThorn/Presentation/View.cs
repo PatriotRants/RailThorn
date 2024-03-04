@@ -16,7 +16,6 @@ public abstract class View : /* Component, */ IView
     public string Title { get; set; }
     public Color4 Background { get; set; }
     public Vector2i ClientSize { get; set; }
-    public WindowState State { get; set; }
     public IGLFWGraphicsContext Context { get; set; }
     public WindowState WindowState { get; set; }
 

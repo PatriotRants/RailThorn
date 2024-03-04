@@ -24,7 +24,7 @@ public class GuiViewController : ViewController
 
     protected override void OnInitializing(IWindowController controller)
     {
-        (WindowController = controller).Load += OnControllerLoaded;
+        (WindowController = controller).RunClient += OnControllerRun;
     }
 
     private void OnLoad()
@@ -39,7 +39,7 @@ public class GuiViewController : ViewController
     {
 
     }
-    private IClient OnControllerLoaded()
+    private IClient OnControllerRun()
     {
         return View;
     }
