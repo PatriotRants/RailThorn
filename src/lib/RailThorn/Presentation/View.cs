@@ -1,4 +1,5 @@
 using System.ComponentModel;
+
 using OpenTK.Mathematics;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
@@ -12,11 +13,12 @@ namespace ForgeWorks.RailThorn.Presentation;
 public abstract class View : /* Component, */ IView
 {
     public string Name { get; }
-    public string Title { get; init; }
+    public string Title { get; set; }
     public Color4 Background { get; set; }
     public Vector2i ClientSize { get; set; }
     public WindowState State { get; set; }
     public IGLFWGraphicsContext Context { get; set; }
+    public WindowState WindowState { get; set; }
 
     protected View(string name)
     {

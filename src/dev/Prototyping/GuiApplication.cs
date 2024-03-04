@@ -1,4 +1,3 @@
-using ForgeWorks.CrossWind.Components;
 using ForgeWorks.CrossWind.Core;
 using ForgeWorks.CrossWind.Presentation;
 
@@ -13,7 +12,7 @@ public class GuiApplication : Application
     public GuiApplication(GuiViewController viewController) : base(viewController.Name)
     {
         var view = (ViewController = viewController).View;
-        WindowController = new WindowController(view.Name, view.Title, view.ClientSize.X, view.ClientSize.Y, view.State);
+        WindowController = new WindowController(view.Name, view.Title, view.WindowState);
     }
 
     protected override void OnStartUp()

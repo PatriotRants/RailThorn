@@ -1,6 +1,6 @@
 using System.ComponentModel;
+
 using OpenTK.Mathematics;
-using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
 
 using ForgeWorks.CrossWind.Components;

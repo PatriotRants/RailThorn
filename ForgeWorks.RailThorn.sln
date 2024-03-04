@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{2F8007E4-748
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototyping", "src\dev\Prototyping\Prototyping.csproj", "{145E98F9-E8CB-447F-9735-440071A1DC3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeWorks.RailThorn", "src\lib\ForgeWorks.RailThorn\ForgeWorks.RailThorn.csproj", "{240BD606-2A20-41C0-A42D-0DBA9DC80925}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeWorks.RailThorn", "src\lib\RailThorn\ForgeWorks.RailThorn.csproj", "{240BD606-2A20-41C0-A42D-0DBA9DC80925}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

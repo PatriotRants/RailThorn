@@ -11,6 +11,8 @@
       <HintPath>../../../dlls/ForgeWorks.CrossWind.dll</HintPath>
     </Reference>
     <PackageReference Include="OpenTK" Version="4.8.2" />
-    <ProjectReference Include="..\..\lib\ForgeWorks.RailThorn\ForgeWorks.RailThorn.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\RailThorn\ForgeWorks.RailThorn.csproj" />
   </ItemGroup>
 </Project>
