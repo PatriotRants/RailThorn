@@ -5,6 +5,8 @@ using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 
+using ForgeWorks.RailThorn.Graphics;
+
 namespace ForgeWorks.RailThorn.Presentation;
 
 /// <summary>
@@ -18,12 +20,25 @@ public abstract class View : /* Component, */ IView
     public Vector2i ClientSize { get; set; }
     public IGLFWGraphicsContext Context { get; set; }
     public WindowState WindowState { get; set; }
+    public IShaderLoader ShaderLoader { get; init; }
 
     protected View(string name)
     {
         Name = name;
     }
 
+    public int LoadShader(ShaderType shaderType, string sourceName)
+    {
+        return ShaderLoader.Load(shaderType, sourceName);
+    }
+    public void CreateProgram(string programName, params int[] shaders)
+    {
+        ShaderLoader.CreateProgram(programName, shaders);
+    }
+    public void DeleteProgram(string programName)
+    {
+        ShaderLoader.DeleteProgram(programName);
+    }
     public virtual void OnRenderView(FrameEventArgs args)
     {
         GL.ClearColor(Background);
